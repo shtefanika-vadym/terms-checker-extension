@@ -1,0 +1,20 @@
+.parent {
+  border: none;
+  cursor: pointer;
+  width: min-content;
+  height: min-content;
+  white-space: nowrap;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+  background-color: transparent;
+  padding: 10px 19px 10px 19px;
+
+  &Primary {
+    color: var(--primary-label-color);
+    background-color: var(--primary-bg);
+  }
+}

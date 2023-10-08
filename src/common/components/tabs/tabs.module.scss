@@ -1,0 +1,28 @@
+.parent {
+  &Tabs {
+    display: flex;
+    border-bottom: 1px solid var(--secondary);
+  }
+
+  &Tab {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 14px 4px 14px;
+    text-transform: uppercase;
+    color: var(--secondary);
+  }
+
+  &ActiveTab {
+    position: relative;
+    color: var(--primary);
+  }
+
+  &ActiveTabLine {
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 2px;
+    position: absolute;
+    background-color: var(--primary-bg);
+  }
+}
