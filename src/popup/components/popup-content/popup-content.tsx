@@ -8,7 +8,7 @@ import { withProviders } from 'app/hoks'
 import { Tabs } from 'common/components'
 import { useTheme } from 'common/hooks'
 
-import { History } from 'features/history'
+import { PageTerms } from 'features/page-terms'
 import { Result } from 'features/result'
 import { Settings } from 'features/settings'
 
@@ -29,7 +29,7 @@ const PopupContent: FC<Props> = ({ onClose }) => {
       <Tabs
         items={[
           { title: t('result'), component: <Result /> },
-          { title: t('history'), component: <History /> },
+          { title: t('history'), component: <PageTerms /> },
           { title: t('settings'), component: <Settings /> },
         ]}
       />

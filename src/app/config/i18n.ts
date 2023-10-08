@@ -16,7 +16,7 @@ i18n
       ro: { ...roJson },
       ru: { ...ruJson },
     },
-    lng: 'ru',
+    lng: 'en',
   })
 
 export default i18n
