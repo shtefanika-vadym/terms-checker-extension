@@ -1,0 +1,46 @@
+.parent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &Label,
+  &Error {
+    color: var(--primary);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &Error,
+  &Required {
+    color: var(--error);
+  }
+
+  &Error {
+    font-size: 12px;
+    margin: 0 0 0 0;
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  &Input {
+    height: 34px;
+    border-radius: 4px;
+    padding: 0 8px 0 8px;
+    outline: none;
+    color: var(--primary);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+
+    &::placeholder {
+      color: var(--secondary);
+      font-size: 13.891px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+}

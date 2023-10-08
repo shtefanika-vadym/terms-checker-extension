@@ -1,3 +1,5 @@
+export { Slice } from 'common/const/slice'
 export { Theme } from 'common/const/theme'
 export { Message } from 'common/const/message'
-export { ButtonModifier } from 'common/const/button-modifier'
+export { HttpMethod, HttpStatus } from 'common/const/http'
+export { ButtonModifier, ButtonSize } from 'common/const/button'

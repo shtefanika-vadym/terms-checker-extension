@@ -1,7 +1,10 @@
 .parent {
   &Tabs {
+    top: 0;
+    position: sticky;
     display: flex;
-    margin: 0 0 20px 0;
+    margin: 17px 0 20px 0;
+    background-color: var(--bg-color);
     border-bottom: 1px solid var(--secondary);
   }
 

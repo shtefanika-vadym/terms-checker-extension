@@ -1,7 +1,19 @@
 {
   "translation": {
-    "result": "Result",
+    "getStarted": "Get started",
+    "analysis": "Analysis",
     "history": "Page terms",
-    "settings": "Settings"
+    "settings": "Settings",
+    "security": "Security",
+    "yourLife": "To Your Life",
+    "email": "Email",
+    "login": "Login",
+    "register": "Register",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "typeHere": "Type here",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?",
+    "addLayer": "Add An Extra Layer Of"
   }
 }

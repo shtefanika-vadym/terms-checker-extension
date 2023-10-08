@@ -3,13 +3,12 @@ import { ReactNode, useMemo, useState } from 'react'
 import { Theme } from 'common/const'
 import { ThemeContext } from 'common/context'
 
-interface ThemeProviderProps {
+interface Props {
   initialTheme?: Theme
   children: ReactNode
 }
 
-const ThemeProvider = (props: ThemeProviderProps) => {
-  const { initialTheme, children } = props
+const ThemeProvider = ({ initialTheme, children }: Props) => {
   const [theme, setTheme] = useState<Theme>(initialTheme || Theme.DARK)
 
   const defaultProps = useMemo(

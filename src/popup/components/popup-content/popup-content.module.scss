@@ -2,9 +2,28 @@
   width: 360px;
   height: 560px;
   overflow: auto;
+  position: relative;
   font-family: var(--font-family);
-  padding: 17px 12px 17px 12px;
+  padding: 0 12px 17px 12px;
   background-color: var(--bg-color);
+
+  &ThemeSwitcher {
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    background-color: transparent;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    svg {
+      stroke: var(--primary);
+    }
+  }
 
   &::-webkit-scrollbar {
     width: 4px;
@@ -16,6 +35,6 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: hsla(210,7%,56%,.15);
+    background-color: hsla(210, 7%, 56%, 0.15);
   }
 }
