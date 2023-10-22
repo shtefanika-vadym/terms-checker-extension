@@ -1,0 +1,21 @@
+.parent {
+  display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+
+  &Header {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  &Header button svg {
+    stroke: var(--primary);
+  }
+
+  &Title {
+    font-size: 22px;
+    margin: 0 0 0 0;
+    color: var(--primary);
+  }
+}

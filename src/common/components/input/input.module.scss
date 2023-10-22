@@ -3,6 +3,10 @@
   display: flex;
   flex-direction: column;
 
+  &Label {
+    margin: 0 0 4px 0;
+  }
+
   &Label,
   &Error {
     color: var(--primary);

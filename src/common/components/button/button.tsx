@@ -2,6 +2,7 @@ import type { ButtonHTMLAttributes, FC } from 'react'
 
 import classNames from 'classnames'
 
+import { Spinner } from 'common/components'
 import { ButtonModifier, ButtonSize } from 'common/const'
 import { Utils } from 'common/utils'
 
@@ -13,18 +14,21 @@ const { capitalizeFirstLetter } = Utils
 
 export interface Props extends ButtonHTMLAttributes<any> {
   size?: ButtonSize
+  isLoading?: boolean
   modifier?: ButtonModifier
   children: JSX.Element | string
 }
 
 export const Button: FC<Props> = ({
   children,
+  isLoading,
   size = ButtonSize.MEDIUM,
   modifier = ButtonModifier.PRIMARY,
   ...rest
 }) => {
   return (
     <button
+      disabled={isLoading || rest.disabled}
       className={classNames(
         styles.parent,
         styles[`parent${capitalizeFirstLetter(size)}`],
@@ -32,6 +36,7 @@ export const Button: FC<Props> = ({
       )}
       {...rest}>
       {children}
+      <Spinner isLoading={isLoading} />
     </button>
   )
 }

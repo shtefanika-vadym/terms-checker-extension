@@ -1,27 +1,50 @@
 import type { ReactNode } from 'react'
-import { useMemo } from 'react'
+import { useCallback, useMemo, useState } from 'react'
+import { useToggle } from 'react-use'
 
-import { AuthContext } from 'common/context'
+import { AuthContext, AuthContextProps } from 'common/context'
+
+import { AuthLogin, AuthRegister } from 'features/auth'
 
 interface Props {
   children: ReactNode
 }
 
 export const AuthProvider = ({ children }: Props) => {
-  const logout = (): void => {}
+  const [user, setUser] = useState('adym')
+  const [isLoading, toggleIsLoading] = useToggle(false)
 
-  const login = async (data: any): Promise<void> => {}
+  const logout = (): void => {
+    setUser(null)
+  }
 
-  const register = async (registerData: any): Promise<any> => {}
+  const delay = (s: number) => new Promise((resolve) => setTimeout(resolve, s * 1000))
 
-  const value = useMemo(
+  const login = useCallback(async (data: AuthLogin): Promise<void> => {
+    toggleIsLoading()
+    await delay(8)
+    toggleIsLoading()
+    setUser('Vadym')
+    console.log('login', data)
+  }, [])
+
+  const register = useCallback(async (data: AuthRegister): Promise<any> => {
+    toggleIsLoading()
+    await delay(8)
+    toggleIsLoading()
+    setUser('Vadym')
+    console.log('register', data)
+  }, [])
+
+  const value: AuthContextProps = useMemo(
     () => ({
+      user,
       login,
       logout,
       register,
-      user: null,
+      isLoading,
     }),
-    [],
+    [isLoading, user],
   )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

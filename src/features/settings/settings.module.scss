@@ -1,2 +1,11 @@
 .parent {
+  display: flex;
+  row-gap: 6px;
+  flex-direction: column;
+
+  &Title {
+    font-size: 22px;
+    margin: 0 0 6px 0;
+    color: var(--primary);
+  }
 }

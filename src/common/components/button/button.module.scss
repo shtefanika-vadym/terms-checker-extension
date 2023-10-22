@@ -10,8 +10,14 @@
   font-style: normal;
   font-weight: 600;
   line-height: 14px;
+  outline: none !important;
   background-color: transparent;
   padding: 10px 19px 10px 19px;
+
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: center;
 
   &Primary {
     color: var(--primary-label-color);
@@ -20,5 +26,10 @@
 
   &Large {
     width: 100%;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--primary-bg-100);
   }
 }

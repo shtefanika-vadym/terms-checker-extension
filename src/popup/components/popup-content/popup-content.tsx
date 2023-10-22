@@ -26,7 +26,7 @@ const PopupContent: FC<Props> = ({ onClose }) => {
   const { theme, toggleTheme } = useTheme()
   const {
     t,
-    i18n: { changeLanguage, language },
+    // i18n: { changeLanguage, language },
   } = useTranslation()
 
   return (

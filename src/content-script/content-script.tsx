@@ -28,8 +28,8 @@ chrome.runtime.onMessage.addListener(
 
 const handleClosePopup = (): void => {
   const dialog: HTMLDialogElement = document.querySelector('dialog')
-  dialog.close()
-  isOpenPopup = !isOpenPopup
+  dialog.remove()
+  isOpenPopup = false
 }
 
 // If the extension is closed, it will be open if not closed
@@ -46,10 +46,6 @@ const toggleIsOpenPopup = (): void => {
     root.render(<Popup onClose={handleClosePopup} />)
     const dialog: HTMLDialogElement = document.querySelector('dialog')
     dialog.showModal()
-    Utils.handleClickOutsidePopup(dialog, (): void => {
-      dialog.close()
-      isOpenPopup = !isOpenPopup
-    })
-    isOpenPopup = !isOpenPopup
+    Utils.handleClickOutsidePopup(dialog, handleClosePopup)
   } else handleClosePopup()
 }

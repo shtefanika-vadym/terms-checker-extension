@@ -8,12 +8,14 @@
   background-color: var(--bg-color);
 
   &ThemeSwitcher {
+    border: 0;
     padding: 0;
-    cursor: pointer;
+    z-index: 10;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    border: 0;
+    outline: none !important;
     background-color: transparent;
 
     position: absolute;

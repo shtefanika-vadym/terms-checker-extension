@@ -1,3 +1,5 @@
 export { Auth } from 'features/auth/auth'
+export * from 'features/auth/interfaces/auth-login'
+export * from 'features/auth/interfaces/auth-register'
 export { authApi } from 'features/auth/state/api/auth-api'
 export { authSlice } from 'features/auth/state/slice/auth-slice'

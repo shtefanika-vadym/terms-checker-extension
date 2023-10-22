@@ -45,10 +45,15 @@
 
     button {
       border: none;
+      outline: none;
       cursor: pointer;
       margin: 0 0 0 0;
       background-color: transparent;
       color: var(--primary-bg);
+    }
+
+    &Disabled button {
+      cursor: not-allowed;
     }
   }
 }
