@@ -12,7 +12,7 @@ interface IProps {
 }
 
 export const Tabs: FC<IProps> = ({ items }) => {
-  const [activeTab, setActiveTab] = useState<Tab>(items[0])
+  const [activeTab, setActiveTab] = useState<Tab>(items[2])
 
   const handleChangeActivateTab = useCallback((tab: Tab) => {
     setActiveTab(tab)

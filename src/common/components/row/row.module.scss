@@ -5,8 +5,8 @@
   column-gap: 7px;
   border-radius: 8px;
   align-items: center;
+  color: var(--primary);
   padding: 0 11px 0 11px;
-  color: var(--secondary);
   background-color: var(--dark-1);
   border: 1px solid var(--secondary);
 
@@ -17,9 +17,26 @@
   &Button {
     cursor: pointer;
     outline: 0 !important;
+    color: var(--secondary);
 
     &:hover {
       color: var(--primary);
     }
+  }
+
+  &Center {
+    justify-content: center;
+  }
+
+  &End {
+    justify-content: flex-end;
+  }
+
+  &SpaceBetween {
+    justify-content: space-between;
+  }
+
+  &Uppercase {
+    text-transform: uppercase;
   }
 }

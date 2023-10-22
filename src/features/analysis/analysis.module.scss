@@ -27,6 +27,10 @@
     width: 150px !important;
   }
 
+  &Progress text {
+    fill: var(--primary) !important;
+  }
+
   &Row {
     width: 100%;
     height: 40px;

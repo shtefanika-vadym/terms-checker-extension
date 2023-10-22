@@ -1,0 +1,15 @@
+.parent {
+  &Add {
+    display: flex;
+    column-gap: 10px;
+  }
+
+  &Manage {
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &Manage button svg {
+    stroke: var(--primary);
+  }
+}

@@ -14,6 +14,11 @@
     "typeHere": "Type here",
     "dontHaveAccount": "Don't have an account?",
     "alreadyHaveAccount": "Already have an account?",
-    "addLayer": "Add An Extra Layer Of"
+    "addLayer": "Add An Extra Layer Of",
+    "recentActivity": "Recent Activity",
+    "language": "Language",
+    "sHistory": "History",
+    "myTerms": "My terms",
+    "logout": "Logout"
   }
 }

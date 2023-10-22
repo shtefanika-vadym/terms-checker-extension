@@ -1,4 +1,9 @@
 .parent {
+  &Title {
+    font-size: 15px;
+    color: var(--primary);
+  }
+
   &List {
     display: flex;
     row-gap: 6px;

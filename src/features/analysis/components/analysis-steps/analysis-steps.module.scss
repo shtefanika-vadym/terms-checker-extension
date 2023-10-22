@@ -6,7 +6,18 @@
 
   &Step {
     font-size: 16px;
+    white-space: nowrap;
     color: var(--secondary);
+    display: flex;
+    column-gap: 5px;
+  }
+
+  &Step svg {
+    stroke: var(--secondary);
+  }
+
+  &ActiveStep svg {
+    stroke: var(--primary);
   }
 
   &ActiveStep {

@@ -8,3 +8,9 @@ export enum SettingsTab {
   LANGUAGE = 'Language',
   LOGOUT = 'Logout',
 }
+
+export enum SettingsLang {
+  EN = 'en',
+  RO = 'ro',
+  RU = 'ru',
+}

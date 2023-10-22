@@ -1,5 +1,7 @@
 export { Slice } from 'common/const/slice'
 export { Theme } from 'common/const/theme'
+export { RowJustify } from 'common/const/row'
 export { Message } from 'common/const/message'
+export { Placeholder, Label } from 'common/const/labels'
 export { HttpMethod, HttpStatus } from 'common/const/http'
 export { ButtonModifier, ButtonSize } from 'common/const/button'

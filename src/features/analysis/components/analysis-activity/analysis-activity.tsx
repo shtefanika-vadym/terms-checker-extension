@@ -1,13 +1,15 @@
-import { Row } from 'common/components'
+import { useTranslation } from 'react-i18next'
 
-import { AnalysisConst } from 'features/analysis/const/analysis'
+import { Row } from 'common/components'
 
 import styles from './analysis-activity.module.scss'
 
 export const AnalysisActivity = () => {
+  const { t } = useTranslation()
   return (
     <div className={styles.parent}>
-      {AnalysisConst.RECENT_ACTIVITY}
+      <h2 className={styles.parentTitle}>{t('recentActivity')}</h2>
+
       <div className={styles.parentList}>
         {['https://ui.mantine.dev/', 'https://ui.mantine.dev/', 'https://ui.mantine.dev/'].map(
           (activity) => (

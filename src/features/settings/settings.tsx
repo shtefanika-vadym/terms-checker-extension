@@ -1,5 +1,6 @@
 import type { FC } from 'react'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { Book, History, Language, Logout } from 'tabler-icons-react'
 
@@ -11,15 +12,15 @@ import { SettingsHistory } from 'features/settings/components/settings-history/s
 import { SettingsLanguage } from 'features/settings/components/settings-language/settings-language'
 import { SettingsRowList } from 'features/settings/components/settings-row-list/settings-row-list'
 import { SettingsTerms } from 'features/settings/components/settings-terms/settings-terms'
-import { SettingsConst, SettingsTab } from 'features/settings/const/settings'
 
 import styles from './settings.module.scss'
 
 export const Settings: FC = () => {
   const { logout } = useAuth()
-  const [settingTab, setSettingTab] = useState<SettingsTab>(null)
+  const { t } = useTranslation()
+  const [settingTab, setSettingTab] = useState<string>(null)
 
-  const handleChangeTab = (tab: SettingsTab): void => {
+  const handleChangeTab = (tab: string): void => {
     setSettingTab(tab)
   }
 
@@ -28,10 +29,10 @@ export const Settings: FC = () => {
   }
 
   if (settingTab) {
-    const tabs: Map<SettingsTab, JSX.Element> = new Map([
-      [SettingsTab.MY_TERMS, <SettingsTerms />],
-      [SettingsTab.HISTORY, <SettingsHistory />],
-      [SettingsTab.LANGUAGE, <SettingsLanguage />],
+    const tabs: Map<string, JSX.Element> = new Map([
+      [t('myTerms'), <SettingsTerms />],
+      [t('sHistory'), <SettingsHistory />],
+      [t('language'), <SettingsLanguage />],
     ])
 
     return (
@@ -43,25 +44,25 @@ export const Settings: FC = () => {
 
   return (
     <div className={styles.parent}>
-      <h1 className={styles.parentTitle}>{SettingsConst.SETTINGS}</h1>
+      <h1 className={styles.parentTitle}>{t('settings')}</h1>
       <SettingsRowList
         items={[
           {
-            title: SettingsTab.HISTORY,
+            title: t('sHistory'),
             handleChange: handleChangeTab,
             icon: <History strokeWidth={1} />,
           },
           {
-            title: SettingsTab.MY_TERMS,
+            title: t('myTerms'),
             handleChange: handleChangeTab,
             icon: <Book strokeWidth={1} />,
           },
           {
-            title: SettingsTab.LANGUAGE,
+            title: t('language'),
             handleChange: handleChangeTab,
             icon: <Language strokeWidth={1} />,
           },
-          { title: SettingsTab.LOGOUT, icon: <Logout strokeWidth={1} />, handleChange: logout },
+          { title: t('logout'), icon: <Logout strokeWidth={1} />, handleChange: logout },
         ]}
       />
     </div>

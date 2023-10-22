@@ -4,10 +4,8 @@ import { ArrowBackUp } from 'tabler-icons-react'
 
 import styles from './settings-wrapper.module.scss'
 
-import { SettingsTab } from 'features/settings/const/settings'
-
 interface Props {
-  tab: SettingsTab
+  tab: string
   children: ReactNode
   handleGoBack: () => void
 }

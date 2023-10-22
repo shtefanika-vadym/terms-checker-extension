@@ -33,7 +33,6 @@ export const Analysis: FC = () => {
             textSize: '22px',
             pathTransitionDuration: 0.5,
             pathColor: '#47d6ab',
-            textColor: '#ffffff',
             backgroundColor: '#3e98c7',
             trailColor: 'hsla(210,7%,56%,.15)',
           })}

@@ -24,10 +24,7 @@ interface Props {
 const PopupContent: FC<Props> = ({ onClose }) => {
   const { user } = useAuth()
   const { theme, toggleTheme } = useTheme()
-  const {
-    t,
-    // i18n: { changeLanguage, language },
-  } = useTranslation()
+  const { t } = useTranslation()
 
   return (
     <div className={classNames(styles.parent, [theme])}>
